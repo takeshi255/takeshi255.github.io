@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VEGAS2の実装</title>
+
+<style>
+*{
+margin: 0;
+padding: 0;
+}
+
+#main-visual{
+width: 100%;
+height: 100vh;
+}
+
+</style>
+<link rel="stylesheet" href="css/vegas.css">
+</head>
+
+<body>
+<div id="main-visual"></div><!-- /#main-visual --> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/vegas.js"></script>
+
+<script>
+
+$(function(){
+$("#main-visual").vegas({
+
+delay:2000,//画像が止まっている時間
+timer:false,//下の白いやつ
+
+Transition:['fade','zoomOut','slideRight'],
+animation:'kenburnsLeft',
+overlay:'overlays/05.png',
+
+slides: [
+{ src: "img/01.webp" },
+{ src: "img/02.webp" },
+{ src: "img/03.webp" }
+]
+});
+});
+
+</script>
+</body>
+</html>
