@@ -1,0 +1,17 @@
+自身で動画のカテゴリーを3つ決め、それに沿って1カテゴリーにつき3つの動画を決める。
+それぞれの動画のをキャプチャーに取って、photoshopで1280×720pxアセットで書き出す。
+載せるカテゴリー
+カテゴリ：
+
+➀ 音楽 
+https://www.youtube.com/watch?v=1DWAmU5dc6g
+https://www.youtube.com/watch?v=Tq0IQq5Fjj8
+https://www.youtube.com/watch?v=xZbjgsE-Vlo
+➁ お酒 
+https://www.youtube.com/watch?v=OaOnmMhG_dQ
+https://www.youtube.com/watch?v=e9pU4Pjlt4E
+https://www.youtube.com/watch?v=Nlj3EueBEj0
+➂ カクテル
+https://www.youtube.com/watch?v=s3usAFAS2ow
+https://www.youtube.com/watch?v=EaGiiF8P0sg
+https://www.youtube.com/watch?v=QM2R6TksyEM

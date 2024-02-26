@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>フィルタリング機能とモーダルを実装</title>
+ <link rel="stylesheet" href="ccs/style.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+</head>
+<body>
+<h1>フィルタリング機能とモーダルを実装</h1>
+
+<div class="container">
+
+<div class="btn-wrapper">
+
+<button type="button" data-filter="all">すべて</button>
+<button type="button" data-filter=".music">音楽 </button><!-- 必ず「.」をつける -->
+<button type="button" data-filter=".drink">お酒 </button>
+<button type="button" data-filter=".cocktail">カクテル</button>
+<button type="button" data-sort="order:asc">人気順</button>
+
+</div><!-- /.btn-wrapper -->
+
+<div class="contents">
+
+<!-- 音楽 -->
+       <div class="mix music" data-order="2"><!-- 人気順の設定 -->
+        <a href="https://www.youtube.com/watch?v=1DWAmU5dc6g" data-fancybox><!-- mixitupを呼び出す属性 -->
+       <img src="img/music1.jpg" alt="">
+       </a>
+       </div><!-- /.mix -->
+
+       <div class="mix music" data-order="1"><!-- 人気順の設定 -->
+        <a href="https://www.youtube.com/watch?v=Tq0IQq5Fjj8" data-fancybox><!-- mixitupを呼び出す属性 -->
+       <img src="img/music2.jpg" alt="">
+       </a>
+       </div><!-- /.mix -->
+
+       <div class="mix music" data-order="5"><!-- 人気順の設定 -->
+        <a href="https://www.youtube.com/watch?v=xZbjgsE-Vlo" data-fancybox><!-- mixitupを呼び出す属性 -->
+       <img src="img/music3.jpg" alt="">
+       </a>
+       </div><!-- /.mix -->
+
+<!-- お酒 -->
+       <div class="mix drink cocktail" data-order="6"><!-- 人気順の設定 -->
+        <a href="https://www.youtube.com/watch?v=OaOnmMhG_dQ" data-fancybox><!-- mixitupを呼び出す属性 -->
+       <img src="img/drink1.jpg" alt="">
+       </a>
+       </div><!-- /.mix -->
+
+       <div class="mix drink cocktail" data-order="3"><!-- 人気順の設定 -->
+        <a href="https://www.youtube.com/watch?v=e9pU4Pjlt4E" data-fancybox><!-- mixitupを呼び出す属性 -->
+       <img src="img/drink2.jpg" alt="">
+       </a>
+       </div><!-- /.mix -->
+
+       <div class="mix drink cocktail" data-order="4"><!-- 人気順の設定 -->
+        <a href="https://www.youtube.com/watch?v=Nlj3EueBEj0" data-fancybox><!-- mixitupを呼び出す属性 -->
+       <img src="img/drink3.jpg" alt="">
+       </a>
+       </div><!-- /.mix -->
+
+<!-- カクテル -->
+        <div class="mix cocktail" data-order="9"><!-- 人気順の設定 -->
+         <a href="https://www.youtube.com/watch?v=s3usAFAS2ow" data-fancybox><!-- mixitupを呼び出す属性 -->
+        <img src="img/cocktail1.jpg" alt="">
+        </a>
+        </div><!-- /.mix -->
+
+        <div class="mix cocktail drink" data-order="8"><!-- 人気順の設定 -->
+         <a href="https://www.youtube.com/watch?v=EaGiiF8P0sg" data-fancybox><!-- mixitupを呼び出す属性 -->
+        <img src="img/cocktail2.jpg" alt="">
+        </a>
+        </div><!-- /.mix -->
+
+        <div class="mix cocktail" data-order="1"><!-- 人気順の設定 -->
+         <a href="https://www.youtube.com/watch?v=QM2R6TksyEM" data-fancybox><!-- mixitupを呼び出す属性 -->
+        <img src="img/cocktail3.jpg" alt="">
+        </a>
+        </div><!-- /.mix -->
+
+</div><!-- /.contents -->
+
+</div><!-- /.container -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="js/mixitup.js"></script>
+
+<script>
+let mixer = mixitup('.contents');
+</script>
+
+</body>
+</html>
