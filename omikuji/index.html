@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>新春お御籤2(1~100までのランダムを取得)</title>
+
+<style>
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+img{
+vertical-align: bottom;
+max-width: 100%;
+}
+
+h1{
+text-align: center;
+font-family: serif;
+padding: 150px 20px 0;
+background: url(img/kadomatsu.png) repeat-x left top/100px;
+}
+
+.kuji-box{
+max-width: 120px;
+margin: 20px auto;
+}
+
+.btn{
+display: block;
+width: 150px;
+margin: 0 auto;
+padding: 6px;
+font-size: 18px; 
+transition: 0.2s;
+cursor: pointer;
+&:hover{
+box-shadow: 0 0 20px #4fa8db;
+background-color:rgb(176, 220, 164); 
+color: #fff;
+border: #fff;
+}
+}
+
+
+#box{
+max-width: 120px;
+margin: 20px auto;
+height: 400px;
+}
+footer{
+background-color: aliceblue;
+text-align: center;
+padding: 30px 0;
+font-size: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>新春お御籤</h1> 
+<p class="kuji-box"><img src="img/omijikuji2.png" alt=""></p>
+<button class ="btn" onclick="kuji();">おみくじを引く</button>
+
+<div id="box"></div>
+
+<script>
+
+function kuji(){
+//配列に画像のファイル名を登録
+let omikuji = new Array(5);//いくつ配列に入れるか設定し、
+
+omikuji[0] = 'daikichi.png';
+omikuji[1] = 'chuukichi.png';
+omikuji[2] = 'kichi.png';
+omikuji[3] = 'kyou.png';
+omikuji[4] = 'daikyou.png';
+
+//1~100までのランダムを取得し、
+let num = Math.ceil(Math.random()*100);
+console.log(num);
+
+//大吉を50%,中吉を20%,吉を17%,凶を10%,大凶を3％
+if(num <= 50){
+result = 0;//大吉の背番号を代入する
+}else if(num <= 70){
+
+result = 1;//中吉の背番号を代入する
+}else if(num <= 87){
+
+result = 2;//吉の背番号を代入する
+}else if(num <= 97){
+
+result = 3;//凶の背番号を代入する
+}else{
+
+result = 4;//凶の背番号を代入する
+}
+
+document.getElementById('box').innerHTML = '<img src="img/'+omikuji[result]+'" alt="">'
+}
+
+
+  
+
+</script>
+
+</script>
+
+</body>
+</html>
